@@ -1,4 +1,4 @@
-var Gauntlet =(function () {
+var Gauntlet =(function (gauntletWeapons) {
 
 var Weapon = function() {
   this.weaponName = "bare hands";
