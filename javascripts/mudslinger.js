@@ -1,4 +1,4 @@
-var Gauntlet = (function(gaunletWords){
+var Gauntlet = (function(gauntletWords){
 
 var trumpAttackWords = [];
 var clintonAttackWords = [];
@@ -51,10 +51,3 @@ function mudSlinger(candidate) {
 }
 
 })(Gauntlet || {});
-
-
-
-
-
-
-
