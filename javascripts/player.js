@@ -31,6 +31,7 @@ gauntletPlayer.Combatants.Player = function(name) {
       "!"
     ].join("");
     return output; // Ex: "Mike with Hillary Clinton has 100 votes and uses talking points!"
+    console.log("output", output);
   };
 };
 
