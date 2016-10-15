@@ -23,6 +23,12 @@ $(document).ready(function() {
   /*
     Show the initial view that accepts player name
    */
+  $("#player-setup").show();
+  var playerOne = new Gauntlet.Combatants.Player();
+  playerOne.weapon = "bare hands";
+  playerOne.class = "Hillary Clinton";
+  playerOne.voterName = "Taylor";
+  console.log(playerOne.toString());
 
 
   /*
