@@ -1,8 +1,8 @@
-var Gauntlet = (function(){
+var Gauntlet = (function(gauntletClasses){
 
-Gauntlet.DebateHall = {};
+gauntletClasses.DebateHall = {};
 
-Gauntlet.DebateHall.PlayerClass = function() {
+gauntletClasses.DebateHall.PlayerClass = function() {
   this.name = "";
   this.party = null;
 
@@ -11,18 +11,18 @@ Gauntlet.DebateHall.PlayerClass = function() {
   }
 };
 
-Gauntlet.DebateHall.DonaldTrump = function() {
+gauntletClasses.DebateHall.DonaldTrump = function() {
   this.name = "Donald Trump";
   this.party = "Republican";
 };
-Gauntlet.DebateHall.DonaldTrump.prototype = new Gauntlet.DebateHall.PlayerClass();
+gauntletClasses.DebateHall.DonaldTrump.prototype = new gauntletClasses.DebateHall.PlayerClass();
 
 
-Gauntlet.DebateHall.HillaryClinton = function() {
+gauntletClasses.DebateHall.HillaryClinton = function() {
   this.name = "Hillary Clinton";
   this.party = "Democrat";
 };
-Gauntlet.DebateHall.HillaryClinton.prototype = new Gauntlet.DebateHall.PlayerClass();
+gauntletClasses.DebateHall.HillaryClinton.prototype = new gauntletClasses.DebateHall.PlayerClass();
 
 })(Gauntlet || {});
 
