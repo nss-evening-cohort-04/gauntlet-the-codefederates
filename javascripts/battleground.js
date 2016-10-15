@@ -13,7 +13,9 @@
 	    $("#currentEnemyHealth").fadeIn();
 	  }
 
-	  $("#attackButton").on("click", function(){
+
+	//   $("#attackButton").on("click", function(){
+
 
 	    //find out damage each player makes.
 	    let heroAttack= Math.floor(Math.random() * (hero.attack + 1));
@@ -42,6 +44,7 @@
 	    currentEnemyHealth -= heroAttack;
 	    return currentEnemyHealth;
 	  };
+
 
 
 
