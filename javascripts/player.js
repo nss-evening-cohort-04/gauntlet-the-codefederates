@@ -22,7 +22,7 @@ gauntletPlayer.Combatants.Player = function(name) {
 
   this.toString = function() {
     var output = [this.voterName,
-      "and",
+      " and ",
       this.class, //this is the candidate
       " have ",
       this.health, //or "votes"
