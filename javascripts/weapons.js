@@ -1,25 +1,25 @@
-var Gauntlet =(function () {
+var Gauntlet =(function (gauntletWeapon) {
 
-var Weapon = function() {
-  this.weaponName = "bare hands";
-  this.weaponDamage = 2;
+	gauntletWeapon.Weapon = function() {
+	  this.weaponName = "bare hands";
+	  this.weaponDamage = 2;
 
-  this.toString = function() {
-    return this.name;
-  }
-};
+	  this.toString = function() {
+	    return this.name;
+	  }
+	};
 
-var talkingPoints = function() {
-  this.weaponName = "talking Points";
-  this.weaponDamage = 4;
-};
-talkingPoints.prototype = new Weapon();
+	gauntletWeapon.talkingPoints = function() {
+	  this.weaponName = "talking Points";
+	  this.weaponDamage = 4;
+	};
+	talkingPoints.prototype = new Weapon();
 
-var experience = function() {
-  this.weaponName = "experience";
-  this.weaponDamage = 5;
-};
-experience.prototype = new Weapon();
+	gauntletWapon.experience = function() {
+	  this.weaponName = "experience";
+	  this.weaponDamage = 5;
+	};
+	experience.prototype = new Weapon();
 
-
+	return gauntletWeapon;
 })(Gauntlet || {});
