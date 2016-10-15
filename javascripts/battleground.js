@@ -1,4 +1,4 @@
- var Gauntlet = (function(battle){
+ // var Gauntlet = (function(battle){
 
  	let currentHeroHealth, currentEnemyHealth, hero, enemy
 
@@ -42,6 +42,8 @@
 	    currentEnemyHealth -= heroAttack;
 	    return currentEnemyHealth;
 	  };
+
+
 
 
 })(Gauntlet || {});
