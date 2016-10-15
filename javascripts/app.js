@@ -20,7 +20,6 @@
 
 
 $(document).ready(function() {
-  Gauntlet.attack();
   /*
     Show the initial view that accepts player name
    */
