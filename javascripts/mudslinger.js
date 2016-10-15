@@ -50,4 +50,6 @@ function mudSlinger(candidate) {
     return statement;
 }
 
+return gauntletWords;
+
 })(Gauntlet || {});
