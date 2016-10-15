@@ -21,5 +21,6 @@ var experience = function() {
 };
 experience.prototype = new Weapon();
 
+return gauntletWeapons;
 
 })(Gauntlet || {});

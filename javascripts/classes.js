@@ -24,5 +24,7 @@ gauntletClasses.DebateHall.HillaryClinton = function() {
 };
 gauntletClasses.DebateHall.HillaryClinton.prototype = new gauntletClasses.DebateHall.PlayerClass();
 
+return gauntletClasses;
+
 })(Gauntlet || {});
 
