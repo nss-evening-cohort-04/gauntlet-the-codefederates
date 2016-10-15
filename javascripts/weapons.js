@@ -1,8 +1,8 @@
 var Gauntlet =(function () {
 
 var Weapon = function() {
-  this.name = "bare hands";
-  this.damage = 2;
+  this.weaponName = "bare hands";
+  this.weaponDamage = 2;
 
   this.toString = function() {
     return this.name;
@@ -10,14 +10,14 @@ var Weapon = function() {
 };
 
 var talkingPoints = function() {
-  this.name = "talking Points";
-  this.damage = 4;
+  this.weaponName = "talking Points";
+  this.weaponDamage = 4;
 };
 talkingPoints.prototype = new Weapon();
 
 var experience = function() {
-  this.name = "experience";
-  this.damage = 5;
+  this.weaponName = "experience";
+  this.weaponDamage = 5;
 };
 experience.prototype = new Weapon();
 
