@@ -26,7 +26,7 @@ gauntletPlayer.Combatants.Player = function(name) {
       this.class, //this is the candidate
       " have ",
       this.health, //or "votes"
-      " votes and uses",
+      " votes and use ",
       this.weapon,
       "!"
     ].join("");
