@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-var Gauntlet =(function (gauntletApp) {
-
-var voterPlayer = new gauntletApp.Combatants.Player();
-voterPlayer.setWeapon(new WarAxe());
-voterPlayer.generateClass();  // This will be used for "Surprise me" option
-console.log(voterPlayer.toString());
-
-var enemyCandidate = new gauntletApp.Combatants.Org();
-enemyCandidate.generateClass();
-enemyCandidate.setWeapon(new BroadSword());
-console.log(enemyCandidate.toString());
-=======
 /*
   Test code to generate a human player and an orc player
  */
@@ -23,19 +10,12 @@ console.log(enemyCandidate.toString());
 // orc.generateClass();
 // orc.setWeapon(new BroadSword());
 // console.log(orc.toString());
->>>>>>> master
 
 /*
   Test code to generate a spell
  */
-<<<<<<< HEAD
-var spell = new gauntletApp.SpellBook.Sphere();
-console.log("spell: ", spell.toString());
-=======
 // var spell = new Gauntlet.SpellBook.Sphere();
 // console.log("spell: ", spell.toString());
-
->>>>>>> master
 
 
 $(document).ready(function() {
@@ -83,5 +63,3 @@ $(document).ready(function() {
   });
 
 });
-
-})(Gauntlet || {});
