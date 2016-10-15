@@ -1,5 +1,3 @@
-var Gauntlet = (function(gauntlet) {
-	return gauntlet;
+var Gauntlet = (function() {
 
-
-})(Gauntlet || {});
+})();
