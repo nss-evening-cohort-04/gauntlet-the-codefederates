@@ -1,3 +1,4 @@
+
 var Gauntlet =(function (gauntletWeapons) {
 
 gauntletWeapons.WeaponBarracks = {};
@@ -11,11 +12,14 @@ gauntletWeapons.WeaponBarracks.Weapon = function() {
   }
 };
 
+
 gauntletWeapons.WeaponBarracks.talkingPoints = function() {
   this.weaponName = "talking Points";
   this.weaponDamage = 4;
 };
 gauntletWeapons.WeaponBarracks.talkingPoints.prototype = new gauntletWeapons.WeaponBarracks.Weapon();
+
+
 
 gauntletWeapons.WeaponBarracks.experience = function() {
   this.weaponName = "experience";

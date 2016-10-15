@@ -1,21 +1,22 @@
 /*
   Test code to generate a human player and an orc player
  */
-var warrior = new Gauntlet.Combatants.Human();
-warrior.setWeapon(new WarAxe());
-warrior.generateClass();  // This will be used for "Surprise me" option
-console.log(warrior.toString());
+// var warrior = new Gauntlet.Combatants.Human();
+// warrior.setWeapon(new WarAxe());
+// warrior.generateClass();  // This will be used for "Surprise me" option
+// console.log(warrior.toString());
 
-var orc = new Gauntlet.Combatants.Orc();
-orc.generateClass();
-orc.setWeapon(new BroadSword());
-console.log(orc.toString());
+// var orc = new Gauntlet.Combatants.Orc();
+// orc.generateClass();
+// orc.setWeapon(new BroadSword());
+// console.log(orc.toString());
 
 /*
   Test code to generate a spell
  */
-var spell = new Gauntlet.SpellBook.Sphere();
-console.log("spell: ", spell.toString());
+// var spell = new Gauntlet.SpellBook.Sphere();
+// console.log("spell: ", spell.toString());
+
 
 
 $(document).ready(function() {
@@ -23,6 +24,12 @@ $(document).ready(function() {
     Show the initial view that accepts player name
    */
   $("#player-setup").show();
+  var playerOne = new Gauntlet.Combatants.Player();
+  playerOne.weapon = "bare hands";
+  playerOne.class = "Hillary Clinton";
+  playerOne.voterName = "Taylor";
+  console.log(playerOne.toString());
+
 
   /*
     When any button with card__link class is clicked,
