@@ -1,50 +1,47 @@
-/*
-  TODO: Modularize this code with IIFE or Browserify
- */
-var Gauntlet = Gauntlet || {};
-Gauntlet.Combatants = {};
+/* This is the base player.js file. When the index.html is more complete, 
+we will be able to complete the constructor functions listed below. 
+The constructor file will need to call from the index.html file what the user 
+has selected for their character/candidate */
+
+
+var Gauntlet = (function (gauntletPlayer) {
+
+gauntletPlayer.Combatants = {};
 
 /*
   Define the base object for any player of Gauntlet,
   whether a human player or a monster.
  */
-Gauntlet.Combatants.Player = function(name) {
-  this.species = null;
+
+gauntletPlayer.Combatants.Player = function(name) {
   this.class = null;
   this.weapon = null;
 
-  this.playerName = name || "unknown adventurer";
-  this.health = Math.floor(Math.random() * 40 + 50);
-  this.limbs = ["head", "neck", "arm", "leg", "torso"];
-  this.skinColor = "gray";
-  this.skinColors = [this.skinColor];
-  this.strength = 90;
-  this.intelligence = 90;
+  this.voterName = name || "Voter";
+  this.health = 100;
 
   this.toString = function() {
-    var output = [this.playerName,
-      ": a ",
-      this.skinColor,
-      " skinned ",
-      this.species,
-      " ",
-      this.class,
-      " with ",
-      this.health,
-      " health. ",
-      (this.class.magical) ? "Able to cast " : " Wielding a ",
-      this.weapon.toString(),
+    var output = [this.voterName,
+      ": with ",
+      this.class, //this is the candidate
+      " has ",
+      this.health, //or "votes"
+      " votes ",
+      " and uses ",
+      this.weapon,
       "!"
     ].join("");
-    return output;
+    return output; // Ex: "Mike with Hillary Clinton has 100 votes and uses talking points!"
   };
 };
 
-Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
-  this.weapon = newWeapon;
-}
 
-Gauntlet.Combatants.Player.prototype.generateClass = function() {
+//This creates the enemy:
+gauntletPlayer.Combatants.Player.prototype.setWeapon = function(newWeapon) {
+  this.weapon = newWeapon;
+};
+
+gauntletPlayer.Combatants.Player.prototype.generateClass = function() {
   // Get a random index from the allowed classes array
   var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
 
@@ -52,41 +49,35 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
   var randomClass = this.allowedClasses[random];
 
   // Composes the corresponding player class into the player object
-  this.class = new Gauntlet.GuildHall[randomClass]();
+  this.class = new gauntletPlayer.GuildHall[randomClass]();
 
-  // Add the health bonus
-  this.health += this.class.healthBonus;
-  return this.class;
 };
 
 /*
   Define the base properties for a human in a 
   constructor function.
  */
-Gauntlet.Combatants.Human = function() {
-  var randomSkin;
+gauntletPlayer.Combatants.Human = function() {
 
-  this.species = "Human";
-  this.intelligence = this.intelligence + 20;
+  this.allowedClasses = ["Donald Trump", "Hillary Clinton"];
 
-  this.skinColors.push("brown", "red", "white", "disease");
-  randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
-  this.skinColor = this.skinColors[randomSkin];
-
-  this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
 };
-Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
+gauntletPlayer.Combatants.Human.prototype = new gauntletPlayer.Combatants.Player();
 
 
 /*
   Define the base properties for a monster in a 
   constructor function.
  */
-Gauntlet.Combatants.Monster = function() {
-  this.health = this.health - 30;
-  this.intelligence = this.intelligence -20;
-  this.strength = this.strength + 30;
+
+gauntletPlayer.Combatants.Monster = function() {
+  this.health = this.health - 30; //for testing purposes, the enemy should be @ 70 health
 };
 
-Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+gauntletPlayer.Combatants.Monster.prototype = new gauntletPlayer.Combatants.Player();
+
+
+return gauntletPlayer;
+
+})(Gauntlet || {});
 
