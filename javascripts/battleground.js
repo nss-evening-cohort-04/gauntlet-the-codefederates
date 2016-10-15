@@ -1,16 +1,34 @@
-	// const Battleground = function (human_combatant, enemy_combatant, console_output = false) {
- //  		this.human = human_combatant;
- //  		this.enemy = enemy_combatant;
- //  		this.console_output = console_output;
-	// };
+ var Gauntlet = (function(battle){
 
-	// Battleground.prototype.attack = function(damage, target_life) {
-	// 	damage = Gauntlet.weaponDamage;
-	// 	console.log(damage);
-	// }();
+	  $("#attackButton").on("click", function(){
+
+	    //find out damage each player makes.
+	    var heroAttack= Math.floor(Math.random() * (hero.attack + 1));
+	    var enemyAttack = Math.floor(Math.random()* (enemy.attack + 1));
 
 
+	    //subtract current damage from health.
+	    battle.updateHeroHealth(enemyAttack);
+	    battle.updateEnemyHealth(heroAttack);
+	    //update DOM.
+	    battle.outputCurrentHealths();
+	    battle.logAttacks(heroAttack, enemyAttack);
+
+	    //check if any healths are zero.
+	    FoodFight.checkForDeath(currentHeroHealth, currentEnemyHealth, hero, enemy);
+	  });
+
+	  
+	  fight.updateHeroHealth = function(enemyAttack) {
+	    currentHeroHealth -= enemyAttack;
+	    return currentHeroHealth;
+
+	  };
+
+	  fight.updateEnemyHealth = function(heroAttack) {
+	    currentEnemyHealth -= heroAttack;
+	    return currentEnemyHealth;
+	  };
 
 
-
-
+})(Gauntlet || {});
