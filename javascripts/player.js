@@ -1,6 +1,6 @@
-/* This is the base player.js file. When the index.html is more complete, 
-we will be able to complete the constructor functions listed below. 
-The constructor file will need to call from the index.html file what the user 
+/* This is the base player.js file. When the index.html is more complete,
+we will be able to complete the constructor functions listed below.
+The constructor file will need to call from the index.html file what the user
 has selected for their character/candidate */
 
 
@@ -22,12 +22,11 @@ gauntletPlayer.Combatants.Player = function(name) {
 
   this.toString = function() {
     var output = [this.voterName,
-      ": with ",
+      "and",
       this.class, //this is the candidate
-      " has ",
+      " have ",
       this.health, //or "votes"
-      " votes ",
-      " and uses ",
+      " votes and uses",
       this.weapon,
       "!"
     ].join("");
@@ -54,7 +53,7 @@ gauntletPlayer.Combatants.Player.prototype.generateClass = function() {
 };
 
 /*
-  Define the base properties for a human in a 
+  Define the base properties for a human in a
   constructor function.
  */
 gauntletPlayer.Combatants.Human = function() {
@@ -66,7 +65,7 @@ gauntletPlayer.Combatants.Human.prototype = new gauntletPlayer.Combatants.Player
 
 
 /*
-  Define the base properties for a monster in a 
+  Define the base properties for a monster in a
   constructor function.
  */
 
