@@ -108,8 +108,6 @@
               </a>
             </div>
 
-
-
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange"
            href="#"
@@ -124,30 +122,60 @@
       <div class="card__prompt">
         <div>BATTLEGROUND</div>
       </div>
-      <div>Imaging/Chartacters here</div>
-      <div>player stats</div>
-      <div>enemy stats</div>
-      <div>move to canada button</div>
-      <div>FACT CHECKER BUTTON</div>
-      <button id="attackButton">Attack</button>
-      <div id="playerInfo"></div>
-      <div id="enemyInfo"></div>
-      <div id ="currentPlayerHealth"></div>
-      <div id ="currentEnemyHealth"></div>
-      <div id="battleLog"></div>
+      <div class="row bgMain">
+        <div class="col-md-12 bgMainImage">
+          <div class="col-md-4 femaleBody" id="left-player-body">
+            <div class="col-md-12 hillary" id="left-player-head"></div>
+          </div>
+          <div class="col-md-4 centerThis muddyWords" id="attackWords">
+            <p>ATTACK words here (dynamically)</p>
+          </div>
+          <div class="col-md-4 maleBody" id="right-player-body">
+            <div class="col-md-12 trump" id="right-player-head"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row bgStats">
+        <div class="col-md-4 centerThis" id="player-stats">
+          <div>Player Name Here (dynamically)</div>
+          <div>Candidate Name Here(dynamically)</div>
+          <div>Health Value Here (dynamically)</div>
+        </div>
+        <div class="col-md-4 centerThis bottomButtons" id="action-buttons">
+          <div class="col-md-4">
+            <a href="http://www.canadavisa.com/assess/canada-immigration-visa.htm" target="_blank" title=""><img src="/images/canadian-flag.png" alt="" class="btnCanada"><h6>IMMIGRATE TO CANADA</h6></a>
+          </div>
+          <div class="col-md-4">
+            <button type="" class="btnDebate">DEBATE</button>
+          </div>
+          <div class="col-md-4">
+            <a href="http://www.factcheck.org" target="_blank" title=""><img src="/images/fact-checker.png" alt="" class="btnFacts"></a>
+          </div>
+        </div>
+        <div class="col-md-4 centerThis" id="enemy-stats">
+          <div>Player Name Here (dynamically)</div>
+          <div>Candidate Name Here(dynamically)</div>
+          <div>Health Value Here (dynamically)</div>
+        </div>
+      </div>
+      <div class="footer centerThis">
+        <button type="" class="btnNewGame">REMATCH</button>
+      </div>
+
     </section>
   </article>
 
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="javascripts/gauntlet.js"></script>
-  <script src="javascripts/battleground.js"></script>
+  <script src="javascripts/mudslinger.js"></script>
   <script src="javascripts/weapons.js"></script>
   <script src="javascripts/classes.js"></script>
   <script src="javascripts/spells.js"></script>
   <script src="javascripts/player.js"></script>
-  <script src="javascripts/mudslinger.js"></script>
   <script src="javascripts/enemies.js"></script>
+  <script src="javascripts/battleground.js"></script>
   <script src="javascripts/app.js"></script>
 
 </body>
+</html>
 </html>
