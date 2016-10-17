@@ -59,8 +59,6 @@ gauntletPlayer.Combatants.Player.prototype.setWeapon = function(newWeapon) {
  */
 gauntletPlayer.Combatants.Human = function() {
 
-  
-
 };
 gauntletPlayer.Combatants.Human.prototype = new gauntletPlayer.Combatants.Player();
 

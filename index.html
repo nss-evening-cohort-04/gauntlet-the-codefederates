@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Gauntlet</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles/gauntlet.css">
 </head>
 
@@ -121,15 +121,18 @@
       </div>
     </section>
 
-    <section id="battleground" class="card card--battleground">
-      <div class="card__prompt">
-        <div>BATTLEGROUND</div>
-      </div>
-      <div id="trumpBody">
-        <img src="images/male-body.png">
-      </div>
-      <div id="trumpBody">
-        <img src="images/male-body.png">
+    <section id="battleground" class="card card--battleground" width="100%" height="100%">
+    <div class="container-fluid">
+      <div class="row vertical center-row">
+        <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-4 col-sm-4 col-md-4 col-lg-4" id="trumpBody">
+          <img src="images/male-body.png" height="50%" width="25%" class="pull-left">
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-md-centercenter vertical-center" id="mudsling">
+          <p id="attackText"></p>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="clintonBody">
+          <img src="images/female-body.png" height="50%" width="25%" class="pull-right">
+        </div>
       </div>
       <!-- <div>Imaging/Chartacters here</div>
       <div>player stats</div>
@@ -137,18 +140,19 @@
       <div>attack button</div>
       <div>move to canada button</div>
       <div>FACT CHECKER BUTTON</div> -->
+      </div>
     </section>
   </article>
-
-  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="/lib/node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="javascripts/gauntlet.js"></script>
+  <script src="javascripts/mudslinger.js"></script>
   <script src="javascripts/battleground.js"></script>
   <script src="javascripts/weapons.js"></script>
   <script src="javascripts/classes.js"></script>
   <script src="javascripts/spells.js"></script>
   <script src="javascripts/player.js"></script>
   <script src="javascripts/enemies.js"></script>
-  <script src="javascripts/mudslinger.js"></script>
   <script src="javascripts/app.js"></script>
 
 </body>

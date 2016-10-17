@@ -1,6 +1,19 @@
  var Gauntlet = (function(battle){
 
- 	let currentHeroHealth, currentEnemyHealth, hero, enemy
+ 	let currentHeroHealth, currentEnemyHealth, hero, enemy;
+ 	//array of objects with id and sentence
+ 	let trumpAttackWords = Gauntlet.getTrumpWords();
+ 	let clintonAttackWords = Gauntlet.getClintonWords();
+
+ 	battle.trumpAttack = function() {
+ 		$.each(trumpAttackWords, function(prop, value) {
+ 			console.log(prop, ": ", value);
+ 		});
+ 	}
+
+ 	// battle.clintonAttack = function() {
+
+ 	// }
 
 	 battle.outputCurrentHealths = function() {
 	    var replacementHeroHealth = $(`<span id ="currentHeroHealth">${currentHeroHealth}</span>`).hide();
@@ -43,4 +56,8 @@
 	    currentEnemyHealth -= heroAttack;
 	    return currentEnemyHealth;
 	};
+
+
+	return battle;
+
 })(Gauntlet || {});
