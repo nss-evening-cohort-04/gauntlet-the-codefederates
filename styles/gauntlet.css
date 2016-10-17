@@ -3,6 +3,8 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 3em;
+  color: #002868;
+  text-decoration: none;
 }
 
 .field {
@@ -113,4 +115,125 @@ body {
 .btn__text {
   padding: 0 50px 0 20px;
   border-radius: 0 5px 5px 0;
+}
+
+.btnDebate,
+.btnCanada,
+.btnFacts {
+  margin: 2px;
+}
+
+.btnCanada,
+.btnFacts {
+  width: 75%;
+  height: auto;
+  text-decoration: none;
+}
+
+.btnDebate {
+  background-color: #BF0A30; /* Red */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.col-md-6 {
+  text-align: center;
+}
+
+.bgBackground {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.bodies {
+  position: relative;
+  z-index: 10;
+}
+
+.heads {
+  position: relative;
+  z-index: 100;
+}
+
+.bgWords {
+  position: relative;
+  z-index: 1000;
+  background: #002868;
+  color: white;
+  padding:10px;
+  height:200px;
+  text-align: center;
+}
+
+.bgMain {
+  height: 700px;
+  width: 100%;
+}
+
+.bgMainImage {
+  background-image: url("/images/battleground-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.femaleBody {
+  background-image: url("/images/female-body.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.maleBody {
+  background-image: url("/images/male-body.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.hillary {
+  background-image: url("/images/clinton-head.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.trump {
+  background-image: url("/images/trump-head.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.centerThis {
+  text-align: center;
+}
+
+.bottomButtons {
+  padding-top: 20px;
+}
+
+.btnNewGame {
+  background-color: #002868; /* Blue */
+  border: none;
+  color: white;
+  padding: 20px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.muddyWords {
+  background:rgba(0,0,0,0.8);
+  color: white;
+  margin-top: 200px;
+  border-radius: 10px;
 }
