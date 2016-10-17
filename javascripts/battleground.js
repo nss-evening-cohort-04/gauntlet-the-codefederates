@@ -1,4 +1,4 @@
- // var Gauntlet = (function(battle){
+ var Gauntlet = (function(battle){
 
  	let currentHeroHealth, currentEnemyHealth, hero, enemy
 
@@ -14,7 +14,7 @@
 	  }
 
 
-	//   $("#attackButton").on("click", function(){
+	$("#attackButton").on("click", function(){
 
 
 	    //find out damage each player makes.
@@ -31,22 +31,16 @@
 
 	    //check if any healths are zero.
 	    Gauntlet.checkForDeath(currentHeroHealth, currentEnemyHealth, hero, enemy);
-	  });
+	});
 
 
 	  battle.updateHeroHealth = function(enemyAttack) {
 	    currentHeroHealth -= enemyAttack;
 	    return currentHeroHealth;
-
-	  };
+	};
 
 	  battle.updateEnemyHealth = function(heroAttack) {
 	    currentEnemyHealth -= heroAttack;
 	    return currentEnemyHealth;
-	  };
-
-
-
-
-
+	};
 })(Gauntlet || {});
