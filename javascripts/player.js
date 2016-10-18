@@ -18,7 +18,7 @@ gauntletPlayer.Combatants.Player = function(name) {
   this.weapon = null;
   this.attack = 15;
   this.voterName = name || "Voter";
-  this.health = 100;
+  this.health = 50;
 
   this.toString = function() {
     var output = [this.voterName,

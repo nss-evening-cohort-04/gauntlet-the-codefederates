@@ -90,7 +90,7 @@ let player, enemy
 						console.log("enemy attack", enemyAttackMath);
 						console.log("player hp", player.health);
 						battle.updatePlayerHealth();
-					}, 5000);
+					}, 3000);
 					break;
 				case "Hillary Clinton":
 					Gauntlet.getClintonWords();
@@ -105,11 +105,9 @@ let player, enemy
 						console.log("enemy attack", enemyAttackMath);
 						console.log("player hp", player.health);
 						battle.updatePlayerHealth();
-					}, 5000);
+					}, 3000);
 					break;
 			}
-
-
 
 			//combat log text output
 			// $("#battleLog").text("");
@@ -118,24 +116,25 @@ let player, enemy
 			//push all to DOM
 			// currentLog.hide().appendTo("#battleLog").fadeIn();
 
-
-
-
 			//check if any healths are zero and do somethin about it!
 			if (player.health <= 0) {
-				player.health = 0;
+				player.health === 0;
 				battle.updatePlayerHealth();
 				$("#attackButton").attr("disabled", true);
-		    $('#attackWords').innerText = "You Lose, try again in 4 years";
-		    alert("you lose");
+				$("#attackButton").addClass('hidden');
+				$("#rematchButton").removeClass('hidden');
+		    // $('#attackWords').text = "You Lose, try again in 4 years";
+		    alert("you lose, click rematch to try again");
 
 			};
 			if (enemy.health <= 0) {
-				enemy.health = 0;
+				enemy.health === 0;
 				battle.updateEnemyHealth();
 				$("#attackButton").attr("disabled", true);
-		    $('#attackWords').innerText = "You Win, welcome to Washington, DC";
-		    alert("you win");
+				$("#attackButton").addClass('hidden');
+				$("#rematchButton").removeClass('hidden');
+		    // $('#attackWords').text = "You Win, welcome to Washington, DC";
+		    alert("you win, click rematch to test your luck");
 
 			} else {
 				$("#attackButton").removeAttr("disabled");
