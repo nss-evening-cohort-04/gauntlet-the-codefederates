@@ -28,17 +28,17 @@ let player, enemy
 
 	battle.updateEnemyHealth = function() {
 		$("#enemy-stats").html(
-			`<h1>${enemy.class}</h1>
-			<h3>With ${enemy.weapon}</h3>
-			<h1 id="enemyHp">Votes: ${enemy.health}</h1>`
+			`<h1 class="white caption">${enemy.class}</h1>
+			<h3 class="topMargin">With ${enemy.weapon}</h3>
+			<h1 class="bgStats" id="enemyHp">Votes: ${enemy.health}</h1>`
 		);
 	};
 
 	battle.updatePlayerHealth = function() {
 		$("#player-stats").html(
-			`<h1>${player.class}</h1>
-			<h3>with ${player.weapon}</h3>
-			<h1>Votes: ${player.health}</h1>
+			`<h1 class="white caption">${player.class}</h1>
+			<h3 class="topMargin">with ${player.weapon}</h3>
+			<h1 class="bgStats">Votes: ${player.health}</h1>
 			<h4>User Name: ${player.voterName}</h4>`
 		);
 	}
@@ -52,16 +52,16 @@ let player, enemy
 
 		//output player info to dom info div.
 		$("#player-stats").html(
-			`<h1>${player.class}</h1>
-			<h3>with ${player.weapon}</h3>
-			<h1>Votes: ${player.health}</h1>
+			`<h1 class="white caption">${player.class}</h1>
+			<h3 class="topMargin">with ${player.weapon}</h3>
+			<h1 class="bgStats">Votes: ${player.health}</h1>
 			<h4>User Name: ${player.voterName}</h4>`
 		);
 		// output enemy info to the dom.
 		$("#enemy-stats").html(
-			`<h1>${enemy.class}</h1>
-			<h3>With ${enemy.weapon}</h3>
-			<h1>Votes: ${enemy.health}</h1>`
+			`<h1 class="white caption">${enemy.class}</h1>
+			<h3 class="topMargin">With ${enemy.weapon}</h3>
+			<h1 class="bgStats">Votes: ${enemy.health}</h1>`
 		);
 
 	}
@@ -126,13 +126,17 @@ let player, enemy
 				player.health = 0;
 				battle.updatePlayerHealth();
 				$("#attackButton").attr("disabled", true);
-				alert('you lose')
+		    $('#attackWords').innerText = "You Lose, try again in 4 years";
+		    alert("you lose");
+
 			};
 			if (enemy.health <= 0) {
 				enemy.health = 0;
 				battle.updateEnemyHealth();
 				$("#attackButton").attr("disabled", true);
-				alert('you win')
+		    $('#attackWords').innerText = "You Win, welcome to Washington, DC";
+		    alert("you win");
+
 			} else {
 				$("#attackButton").removeAttr("disabled");
 			}
