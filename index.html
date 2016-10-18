@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Political Gauntlet</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles/gauntlet.css">
 </head>
@@ -13,9 +14,12 @@
 
   <article id="game-container">
 
+
     <section id="player-setup" class="card card--name">
       <div class="card__prompt">
-        <div>RECORD YOUR NAME, VOTER</div>
+      <div>The Commission on Presidential Debates</div>
+        <div>Citizen Participation Forum</div>
+        <div class="alias">Enter your name:</div>
         <div class="field">
           <input type="text" autofocus="true" id="player-name" class="field__textinput">
         </div>
@@ -33,6 +37,7 @@
 
     <section id="class-select" class="card card--class">
       <div class="card__prompt">
+        <div>The Commission on Presidential Debates</div>
         <div>CHOOSE YOUR PARTY</div>
         <div>
           <a class="card__back btn btn--small"
@@ -44,23 +49,41 @@
         </div>
       </div>
 
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-4">
+            <div class="col-md-3">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">BERNIE</span>
+              </a>
+            </div>
+            </div>
+            <div class="col-md-3">
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">CLINTON</span>
               </a>
             </div>
-
+            </div>
+            <div class="col-md-3">
             <div class="card__button">
               <a class="class__link btn btn--big btn--orange" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">TRUMP</span>
               </a>
             </div>
-          </div>
+            </div>
+
+            <div class="col-md-3">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--orange" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">CRUZ</span>
+              </a>
+            </div>
+            </div>
         </div>
       </div>
 
@@ -76,6 +99,7 @@
 
     <section id="weapon-select" class="card card--weapon">
       <div class="card__prompt">
+      <div>The Commission on Presidential Debates</div>
         <div>choose your weapon</div>
         <div>
           <a class="card__back btn btn--small"
@@ -109,7 +133,7 @@
             </div>
 
       <div class="card__button">
-        <a class="card__link btn btn--big btn--orange"
+        <a class="card__link btn btn--big btn--green"
            href="#"
            next="card--battleground">
           <span class="btn__prompt">></span>
@@ -120,7 +144,7 @@
 
     <section id="battleground" class="card card--battleground">
       <div class="card__prompt">
-        <div>BATTLEGROUND</div>
+<!--         <div>BATTLEGROUND</div> -->
       </div>
       <div class="row bgMain">
         <div class="col-md-12 bgMainImage">

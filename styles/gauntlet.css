@@ -1,10 +1,17 @@
 body {
-  font-family: "Lato", "Helvetica", "sans-serif";
+  font-family: "Lora", serif;
   margin: 0;
   padding: 10px;
   font-size: 3em;
   color: #002868;
   text-decoration: none;
+}
+
+header {
+  font-family: "Lora", serif;
+  width: 750px;
+  margin: auto;
+  margin-left: 29%;
 }
 
 .field {
@@ -27,10 +34,14 @@ body {
 }
 
 .card__prompt {
-  font-size: 1.1em;
-  font-weight: bold;
+  font-family: "Lora", serif;
   text-align: center;
   text-transform: uppercase;
+}
+
+.alias {
+  font-size: .8em;
+  padding-top: 1%;
 }
 
 .card__button {
@@ -141,7 +152,8 @@ body {
   font-size: 16px;
 }
 
-.col-md-6 {
+.col-md-6,
+.col-md-3 {
   text-align: center;
 }
 
@@ -173,7 +185,7 @@ body {
 }
 
 .bgMain {
-  height: 700px;
+  height: 673px;
   width: 100%;
 }
 
@@ -181,35 +193,35 @@ body {
   background-image: url("/images/battleground-background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 673px;
 }
 
 .femaleBody {
   background-image: url("/images/female-body.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 673px;
 }
 
 .maleBody {
   background-image: url("/images/male-body.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 673px;
 }
 
 .hillary {
   background-image: url("/images/clinton-head.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 673px;
 }
 
 .trump {
   background-image: url("/images/trump-head.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 673px;
 }
 
 .centerThis {
