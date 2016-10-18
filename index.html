@@ -17,9 +17,8 @@
 
     <section id="player-setup" class="card card--name">
       <div class="card__prompt">
-      <div>The Commission on Presidential Debates</div>
-        <div>Citizen Participation Forum</div>
-        <div class="alias">Enter your name:</div>
+      <div class="topper blue white"><img src="http://www.clker.com/cliparts/T/y/k/o/D/E/white-star-md.png" class="star">The Commission on Presidential Debates<img src="http://www.clker.com/cliparts/T/y/k/o/D/E/white-star-md.png" class="star"></div>
+        <h4>Enter your name:</h4>
         <div class="field">
           <input type="text" autofocus="true" id="player-name" class="field__textinput">
         </div>
@@ -37,16 +36,8 @@
 
     <section id="class-select" class="card card--class">
       <div class="card__prompt">
-        <div>The Commission on Presidential Debates</div>
-        <div>CHOOSE YOUR PARTY</div>
-        <div>
-          <a class="card__back btn btn--small"
-             href="#"
-             previous="card--name">
-            <span class="btn__prompt">&lt;</span>
-            <span class="btn__text">Back</span>
-          </a>
-        </div>
+        <div class="topper blue white"><img src="http://www.clker.com/cliparts/T/y/k/o/D/E/white-star-md.png" class="star">The Commission on Presidential Debates<img src="http://www.clker.com/cliparts/T/y/k/o/D/E/white-star-md.png" class="star"></div>
+        <h4>Choose Your Candidate:</h4>
       </div>
 
       <div class="container">
@@ -95,20 +86,20 @@
           <span class="btn__text">Select weapon</span>
         </a>
       </div>
-    </section>
-
-    <section id="weapon-select" class="card card--weapon">
-      <div class="card__prompt">
-      <div>The Commission on Presidential Debates</div>
-        <div>choose your weapon</div>
-        <div>
+      <div class="centerThis">
           <a class="card__back btn btn--small"
              href="#"
-             previous="card--class">
+             previous="card--name">
             <span class="btn__prompt">&lt;</span>
             <span class="btn__text">Back</span>
           </a>
         </div>
+    </section>
+
+    <section id="weapon-select" class="card card--weapon">
+      <div class="card__prompt">
+        <div class="topper blue white"><img src="http://www.clker.com/cliparts/T/y/k/o/D/E/white-star-md.png" class="star">The Commission on Presidential Debates<img src="http://www.clker.com/cliparts/T/y/k/o/D/E/white-star-md.png" class="star"></div>
+        <h4>Select Your Weapon:</h4>
       </div>
 
             <div class="card__button">
@@ -137,28 +128,38 @@
            href="#"
            next="card--battleground">
           <span class="btn__prompt">></span>
-          <span class="btn__text" id="debateBtn">debate your opponent</span>
+          <span class="btn__text" id="debateBtn white">debate your opponent</span>
         </a>
       </div>
+      <div class="centerThis">
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--class">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
     </section>
 
     <section id="battleground" class="card card--battleground">
       <div class="card__prompt">
-<!--         <div>BATTLEGROUND</div> -->
+        <div class="topper blue white"><img src="http://www.clker.com/cliparts/T/y/k/o/D/E/white-star-md.png" class="star">The Commission on Presidential Debates<img src="http://www.clker.com/cliparts/T/y/k/o/D/E/white-star-md.png" class="star"></div>
       </div>
+      <center>
       <div class="row bgMain">
-        <div class="col-md-12 standardizedBGImages bgMainImage">
-          <div class="col-md-4 standardizedBGImages femaleBody" id="left-player-body">
-            <div class="col-md-12 standardizedBGImages hillary" id="left-player-head"></div>
+        <div class="col-md-12 backgroundStandards bgMainImage">
+          <div class="col-md-4 backgroundStandards femaleBody" id="left-player-body">
+            <div class="col-md-12 backgroundStandards hillary" id="left-player-head"></div>
           </div>
-          <div class="col-md-4 centerThis muddyWords" id="attackWords">
+          <div class="col-md-4 centerThis muddyWords white" id="attackWords">
             <p>ATTACK words here (dynamically)</p>
           </div>
-          <div class="col-md-4 standardizedBGImages maleBody" id="right-player-body">
-            <div class="col-md-12 standardizedBGImages trump" id="right-player-head"></div>
+          <div class="col-md-4 backgroundStandards maleBody" id="right-player-body">
+            <div class="col-md-12 backgroundStandards trump" id="right-player-head"></div>
           </div>
         </div>
       </div>
+      </center>
       <div class="row bgStats">
         <div class="col-md-4 centerThis" id="player-stats">
           <div>Player Name Here (dynamically)</div>
@@ -170,7 +171,7 @@
             <a href="http://www.canadavisa.com/assess/canada-immigration-visa.htm" target="_blank" title=""><img src="/images/canadian-flag.png" alt="" class="btnCanada"><h6>IMMIGRATE TO CANADA</h6></a>
           </div>
           <div class="col-md-4">
-            <button type="" id="attackButton" class="btnDebate">DEBATE</button>
+            <button type="" id="attackButton" class="btnDebate red white">DEBATE</button>
           </div>
           <div class="col-md-4">
             <a href="http://www.factcheck.org" target="_blank" title=""><img src="/images/fact-checker.png" alt="" class="btnFacts"></a>
@@ -183,7 +184,7 @@
         </div>
       </div>
       <div class="footer centerThis">
-        <button type="" class="btnNewGame" onClick="window.location.reload()">REMATCH</button>
+        <button type="" class="btnNewGame blue white" onClick="window.location.reload()">REMATCH</button>
       </div>
     </section>
   </article>
