@@ -39,7 +39,7 @@ $(document).ready(function() {
   // For Selecting Candidate:
   /* use if statement to determine if the user clicked Clinton or Trump
   if Trump is clicked, class = "Donald Trump"
-  if Clinton is clicked, class = "Hillary Clinton" 
+  if Clinton is clicked, class = "Hillary Clinton"
   BOTH CLINTON & TRUMP BUTTONS will need id's so we can call them in the .js files */
   //event listener to set player class
   $(".btn--blue").click(function() {

@@ -46,7 +46,7 @@ body {
 
 .btn {
   text-decoration: none;
-  background-color: lightgray;
+  background-color: gainsboro;
   color: white;
   border-radius: 5px;
   display: inline-block;
@@ -140,6 +140,15 @@ body {
   border-radius: 15px;
 }
 
+.selected {
+  background-color: gainsboro;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
 /***** Colors *****/
 
 .red {
@@ -153,6 +162,11 @@ body {
 .white {
   color: white;
 }
+
+.gray {
+  background: darkslategray;
+}
+
 
 /****** Aligment ******/
 .col-md-6,
@@ -183,30 +197,39 @@ body {
 
 /****** IMAGING *****/
 
-.backgroundStandards {
+.bgMainImage {
+  background-image: url("/images/battleground-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 700px;
 }
 
-.bgMainImage {
-  background-image: url("/images/battleground-background.png");
-}
-
 .femaleBody {
   background-image: url("/images/female-body.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
 }
 
 .maleBody {
   background-image: url("/images/male-body.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
 }
 
 .hillary {
   background-image: url("/images/clinton-head.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
 }
 
 .trump {
   background-image: url("/images/trump-head.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
 }
 
 .muddyWords {
@@ -218,5 +241,5 @@ body {
 .topper {
   font-weight: bolder;
   padding: 10px 0;
-  margin-bottom: 10px;
+/*  margin-bottom: 10px;*/
 }
