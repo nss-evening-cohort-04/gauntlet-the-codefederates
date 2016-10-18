@@ -124,11 +124,13 @@ let player, enemy
 			//check if any healths are zero and do somethin about it!
 			if (player.health <= 0) {
 				player.health = 0;
+				battle.updatePlayerHealth();
 				$("#attackButton").attr("disabled", true);
 				alert('you lose')
 			};
 			if (enemy.health <= 0) {
 				enemy.health = 0;
+				battle.updateEnemyHealth();
 				$("#attackButton").attr("disabled", true);
 				alert('you win')
 			} else {
