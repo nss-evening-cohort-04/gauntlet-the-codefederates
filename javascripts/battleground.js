@@ -90,7 +90,7 @@ let player, enemy
 						console.log("enemy attack", enemyAttackMath);
 						console.log("player hp", player.health);
 						battle.updatePlayerHealth();
-					}, 3000);		
+					}, 5000);
 					break;
 				case "Hillary Clinton":
 					Gauntlet.getClintonWords();
@@ -105,12 +105,12 @@ let player, enemy
 						console.log("enemy attack", enemyAttackMath);
 						console.log("player hp", player.health);
 						battle.updatePlayerHealth();
-					}, 3000);
+					}, 5000);
 					break;
 			}
-			
-			
-			
+
+
+
 			//combat log text output
 			// $("#battleLog").text("");
 			// let currentLog = $(`<p><span class="insertText">${enemy.voterName}</span> attacks <span class="insertText">${player.voterName}</span> with <span class="insertText">${enemy.weapon}</span> This attack does <span class="insertText">${enemyAttackMath}</span> damage.<h1>player health is : ${player.health}</h1></p> <p><span class="insertText">${player.voterName}</span> attacks <span class="insertText">${enemy.voterName}</span> with <span class="insertText">${player.weapon}</span>. This attack does <span class="insertText">${playerAttackMath}</span> damage<h1 id="enemyHp">enemy health is : ${enemyAttack}</h1>.</p>`);
@@ -118,8 +118,8 @@ let player, enemy
 			//push all to DOM
 			// currentLog.hide().appendTo("#battleLog").fadeIn();
 
-			
-			
+
+
 
 			//check if any healths are zero and do somethin about it!
 			if (player.health <= 0) {
