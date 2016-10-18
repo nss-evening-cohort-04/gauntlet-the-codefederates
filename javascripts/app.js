@@ -20,6 +20,7 @@
 
 /* Create new instance of Human */
 let playerOne = new Gauntlet.Combatants.Human();
+let buttholio = new Gauntlet.Combatants.Opponent();
 /* Create new instance of Opponent */
 $(document).ready(function() {
   /*
@@ -69,7 +70,9 @@ $(document).ready(function() {
     playerOne.weapon = "bare hands";
     console.log(playerOne.toString());
   });
-
+  console.log(playerOne);
+  var newPlayer = playerOne
+  console.log(newPlayer);
 
   /*
     When any button with card__link class is clicked,
@@ -88,6 +91,9 @@ $(document).ready(function() {
         break;
       case "card--battleground":
         moveAlong = true;
+        buttholio.class();
+        Gauntlet.InitializeBattleground(playerOne, buttholio);
+
         break;
     }
 
