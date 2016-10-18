@@ -134,7 +134,7 @@ body {
   background-color: #BF0A30; /* Red */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -177,39 +177,33 @@ body {
   width: 100%;
 }
 
-.bgMainImage {
-  background-image: url("/images/battleground-background.png");
+/* standardizedBGImages applies to the following 5 classes listed below 
+(.bgMainImage through .trump) in the index.html file */
+.standardizedBGImages {
   background-size: cover;
   background-repeat: no-repeat;
   height: 700px;
+}
+
+
+.bgMainImage {
+  background-image: url("/images/battleground-background.png");
 }
 
 .femaleBody {
   background-image: url("/images/female-body.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 700px;
 }
 
 .maleBody {
   background-image: url("/images/male-body.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 700px;
 }
 
 .hillary {
   background-image: url("/images/clinton-head.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 700px;
 }
 
 .trump {
   background-image: url("/images/trump-head.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 700px;
 }
 
 .centerThis {
