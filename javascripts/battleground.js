@@ -119,23 +119,32 @@ let player, enemy
 			//check if any healths are zero and do somethin about it!
 			if (player.health <= 0) {
 				player.health === 0;
-				battle.updatePlayerHealth();
+				// battle.updatePlayerHealth();
 				$("#attackButton").attr("disabled", true);
 				$("#attackButton").addClass('hidden');
 				$("#rematchButton").removeClass('hidden');
 		    // $('#attackWords').text = "You Lose, try again in 4 years";
-		    alert("you lose, click rematch to try again");
+		    setTimeout(function() {
+		    	console.log("attackwords", $('#attackWords'));
+		    	$('#attackWords')[0].innerText = "You Lose, try again in 4 years";
+		    	$('#attackWords')[0].className = "gameOver";
+
+		    	// alert("you lose, click rematch to try again");
+		    }, 3500);
 
 			};
 			if (enemy.health <= 0) {
 				enemy.health === 0;
-				battle.updateEnemyHealth();
+				// battle.updateEnemyHealth();
 				$("#attackButton").attr("disabled", true);
 				$("#attackButton").addClass('hidden');
 				$("#rematchButton").removeClass('hidden');
 		    // $('#attackWords').text = "You Win, welcome to Washington, DC";
-		    alert("you win, click rematch to test your luck");
-
+		    setTimeout(function() {
+		    	$('#attackWords')[0].innerText = "You Win, welcome to Washington, DC";
+		    	$('#attackWords')[0].className = "gameOver";
+		    	// alert("you win, click rematch to press your luck");
+		    }, 3500);
 			} else {
 				$("#attackButton").removeAttr("disabled");
 			}
