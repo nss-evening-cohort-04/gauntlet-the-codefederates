@@ -145,6 +145,10 @@ body {
   color: white;
 }
 
+.hidden {
+  display: none;
+}
+
 /***** Colors *****/
 
 .red {
@@ -158,6 +162,11 @@ body {
 .white {
   color: white;
 }
+
+.gray {
+  background: darkslategray;
+}
+
 
 /****** Aligment ******/
 .col-md-6,
