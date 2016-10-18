@@ -149,6 +149,12 @@ body {
   display: none;
 }
 
+.winner {
+  background-color: #BF0A30; /* Red */
+  font-size: 2em;
+  color: white;
+}
+
 /***** Colors *****/
 
 .red {
@@ -167,8 +173,13 @@ body {
   background: darkslategray;
 }
 
+.gameOver {
+  background-color: #BF0A30; /* Red */
+  font-size: 2em;
+  color: white;
+}
 
-/****** Aligment ******/
+/****** Aligment/layout ******/
 .col-md-6,
 .col-md-3 {
   text-align: center;
@@ -194,6 +205,24 @@ body {
   padding-top: 20px;
 }
 
+#player-stats,
+#enemy-stats {
+  margin-top: -70px;
+}
+
+.bgStats {
+  padding-top: -20px;
+  margin-top: -10px;
+}
+
+.caption {
+  background:rgba(0,0,0,0.8);
+  height: 50px;
+}
+
+.topMargin {
+  margin-top: -10px;
+}
 
 /****** IMAGING *****/
 
