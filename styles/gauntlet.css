@@ -1,19 +1,21 @@
+/****** MAIN STYLE ******/
 body {
   font-family: "Lora", serif;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   font-size: 3em;
   color: #002868;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
-header {
-  font-family: "Lora", serif;
-  width: 750px;
-  margin: auto;
-  margin-left: 29%;
+.star {
+  width: 30px;
+  padding-bottom: 2px;
+  margin: 5px;
 }
 
+/***** LANDING STYLE *****/
 .field {
   margin: 20px 0 0 0;
 }
@@ -25,23 +27,13 @@ header {
   min-width: 500px;
 }
 
-
-/*
-  Section styles
- */
+/**** Section styles****/
 .card {
   display: none;
 }
 
 .card__prompt {
-  font-family: "Lora", serif;
   text-align: center;
-  text-transform: uppercase;
-}
-
-.alias {
-  font-size: .8em;
-  padding-top: 1%;
 }
 
 .card__button {
@@ -50,15 +42,12 @@ header {
   text-align: center;
 }
 
-
-/*
-  Button styles
- */
+/**** Button styles****/
 
 .btn {
   text-decoration: none;
-  background-color: white;
-  color: #888;
+  background-color: lightgray;
+  color: white;
   border-radius: 5px;
   display: inline-block;
   margin: 10px;
@@ -70,32 +59,22 @@ header {
 }
 
 .btn--orange {
-  border-color: #FF4136;
-  color: white;
   background-color: #FF4136;
 }
 
 .btn--blue {
-  border-color: #0074D9;
-  color: white;
   background-color: #0074D9;
 }
 
 .btn--green {
-  border-color: #008000;
-  color: white;
   background-color: #008000;
 }
 
 .btn--dkyellow {
-  border-color: #DAA520;
-  color: white;
   background-color: #DAA520;
 }
 
 .btn--yellow {
-  border-color: #E4BD00;
-  color: white;
   background-color: #F3C500;
 }
 
@@ -142,16 +121,40 @@ header {
 }
 
 .btnDebate {
-  background-color: #BF0A30; /* Red */
   border: none;
-  color: white;
   padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
+  border-radius: 15px;
 }
 
+.btnNewGame {
+  border: none;
+  padding: 20px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+/***** Colors *****/
+
+.red {
+  background-color: #BF0A30; /* Red */
+}
+
+.blue {
+  background-color: #002868; /* Blue */
+}
+
+.white {
+  color: white;
+}
+
+/****** Aligment ******/
 .col-md-6,
 .col-md-3 {
   text-align: center;
@@ -164,71 +167,9 @@ header {
   margin-bottom:10px;
 }
 
-.bodies {
-  position: relative;
-  z-index: 10;
-}
-
-.heads {
-  position: relative;
-  z-index: 100;
-}
-
-.bgWords {
-  position: relative;
-  z-index: 1000;
-  background: #002868;
-  color: white;
-  padding:10px;
-  height:200px;
-  text-align: center;
-}
-
 .bgMain {
-  height: 673px;
+  height: 700px;
   width: 100%;
-}
-
-/* standardizedBGImages applies to the following 5 classes listed below
-(.bgMainImage through .trump) in the index.html file */
-.standardizedBGImages {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 673px;
-}
-
-
-.bgMainImage {
-  background-image: url("/images/battleground-background.png");
-}
-
-.femaleBody {
-  background-image: url("/images/female-body.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 673px;
-
-}
-
-.maleBody {
-  background-image: url("/images/male-body.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 673px;
-}
-
-.hillary {
-  background-image: url("/images/clinton-head.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 673px;
-}
-
-.trump {
-  background-image: url("/images/trump-head.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 673px;
 }
 
 .centerThis {
@@ -238,22 +179,44 @@ header {
 .bottomButtons {
   padding-top: 20px;
 }
-{}
 
-.btnNewGame {
-  background-color: #002868; /* Blue */
-  border: none;
-  color: white;
-  padding: 20px 50px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+
+/****** IMAGING *****/
+
+.backgroundStandards {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.bgMainImage {
+  background-image: url("/images/battleground-background.png");
+}
+
+.femaleBody {
+  background-image: url("/images/female-body.png");
+}
+
+.maleBody {
+  background-image: url("/images/male-body.png");
+}
+
+.hillary {
+  background-image: url("/images/clinton-head.png");
+}
+
+.trump {
+  background-image: url("/images/trump-head.png");
 }
 
 .muddyWords {
   background:rgba(0,0,0,0.8);
-  color: white;
   margin-top: 200px;
   border-radius: 10px;
+}
+
+.topper {
+  font-weight: bolder;
+  padding: 10px 0;
+  margin-bottom: 10px;
 }
