@@ -16,7 +16,7 @@ gauntletPlayer.Combatants = {};
 gauntletPlayer.Combatants.Player = function(name) {
   this.class = null;
   this.weapon = null;
-
+  this.attack = 15;
   this.voterName = name || "Voter";
   this.health = 100;
 
@@ -71,7 +71,7 @@ gauntletPlayer.Combatants.Human.prototype = new gauntletPlayer.Combatants.Player
  */
 
 gauntletPlayer.Combatants.Monster = function() {
-  this.health = this.health - 30; //for testing purposes, the enemy should be @ 70 health
+  this.health = this.health; //for testing purposes, the enemy should be @ 70 health
 };
 
 gauntletPlayer.Combatants.Monster.prototype = new gauntletPlayer.Combatants.Player();
