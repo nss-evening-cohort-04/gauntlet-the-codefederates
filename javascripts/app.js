@@ -20,6 +20,7 @@
 
 /* Create new instance of Human */
 let playerOne = new Gauntlet.Combatants.Human();
+let buttholio = new Gauntlet.Combatants.Opponent();
 /* Create new instance of Opponent */
 $(document).ready(function() {
   /*
@@ -82,7 +83,9 @@ $(document).ready(function() {
     $("#talkingpoints").removeClass('selected');
     $("#experience").removeClass('selected');
   });
-
+  console.log(playerOne);
+  var newPlayer = playerOne
+  console.log(newPlayer);
 
   /*
     When any button with card__link class is clicked,
@@ -100,6 +103,8 @@ $(document).ready(function() {
         moveAlong = ($(".btn--blue").hasClass('selected') || $(".btn--orange").hasClass('selected'));
         break;
       case "card--battleground":
+        buttholio.class();
+        Gauntlet.InitializeBattleground(playerOne, buttholio);
         moveAlong = ($("#talkingpoints").hasClass('selected') || $("#experience").hasClass('selected') || $("#barehands").hasClass('selected'));
         break;
     }
