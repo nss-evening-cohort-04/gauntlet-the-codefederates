@@ -1,6 +1,6 @@
 var Gauntlet = (function(battle){
 
-let player, enemy 
+let player, enemy
 
 	battle.updateEnemyHealth = function() {
 		$("#enemy-stats").html(
@@ -13,7 +13,7 @@ let player, enemy
 	battle.updatePlayerHealth = function() {
 		$("#player-stats").html(
 			`<h1>${player.voterName}</h1>
-			<h3>a ${player.class} with ${player.weapon}</h3>
+			<h3>${player.class} with ${player.weapon}</h3>
 			<h1>${player.health}</h1>`
 		);
 	}
@@ -26,7 +26,7 @@ let player, enemy
 		//output player info to dom info div.
 		$("#player-stats").html(
 			`<h1>${player.voterName}</h1>
-			<h3>a ${player.class} with ${player.weapon}</h3>
+			<h3>${player.class} with ${player.weapon}</h3>
 			<h1>${player.health}</h1>`
 		);
 		// output enemy info to the dom.
