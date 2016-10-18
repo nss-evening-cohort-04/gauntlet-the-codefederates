@@ -45,10 +45,14 @@ $(document).ready(function() {
   $(".btn--blue").click(function() {
     playerOne.class = "Hillary Clinton";
     console.log(playerOne.toString());
+    $(".btn--blue").addClass('selected');
+    $(".btn--orange").removeClass('selected');
   });
   $(".btn--orange").click(function() {
     playerOne.class = "Donald Trump";
     console.log(playerOne.toString());
+    $(".btn--orange").addClass('selected');
+    $(".btn--blue").removeClass('selected');
   });
 
   //For Selecting Weapon:
@@ -61,14 +65,23 @@ $(document).ready(function() {
   $("#talkingpoints").click(function() {
     playerOne.weapon = "talking points";
     console.log(playerOne.toString());
+    $("#talkingpoints").addClass('selected');
+    $("#experience").removeClass('selected');
+    $("#barehands").removeClass('selected');
   });
   $("#experience").click(function() {
     playerOne.weapon = "experience";
     console.log(playerOne.toString());
+    $("#experience").addClass('selected');
+    $("#talkingpoints").removeClass('selected');
+    $("#barehands").removeClass('selected');
   });
   $("#barehands").click(function() {
     playerOne.weapon = "bare hands";
     console.log(playerOne.toString());
+    $("#barehands").addClass('selected');
+    $("#talkingpoints").removeClass('selected');
+    $("#experience").removeClass('selected');
   });
   console.log(playerOne);
   var newPlayer = playerOne
@@ -87,12 +100,12 @@ $(document).ready(function() {
         moveAlong = ($("#player-name").val() !== "");
         break;
       case "card--weapon":
-        moveAlong = true;
+        moveAlong = ($(".btn--blue").hasClass('selected') || $(".btn--orange").hasClass('selected'));
         break;
       case "card--battleground":
-        moveAlong = true;
         buttholio.class();
         Gauntlet.InitializeBattleground(playerOne, buttholio);
+        moveAlong = ($("#talkingpoints").hasClass('selected') || $("#experience").hasClass('selected') || $("#barehands").hasClass('selected'));
         break;
     }
 

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Gauntlet</title>
+  <title>Political Gauntlet</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles/gauntlet.css">
@@ -123,15 +123,15 @@
         <div>BATTLEGROUND</div>
       </div>
       <div class="row bgMain">
-        <div class="col-md-12 bgMainImage">
-          <div class="col-md-4 femaleBody" id="left-player-body">
-            <div class="col-md-12 hillary" id="left-player-head"></div>
+        <div class="col-md-12 standardizedBGImages bgMainImage">
+          <div class="col-md-4 standardizedBGImages femaleBody" id="left-player-body">
+            <div class="col-md-12 standardizedBGImages hillary" id="left-player-head"></div>
           </div>
           <div class="col-md-4 centerThis muddyWords" id="attackWords">
             <p>ATTACK words here (dynamically)</p>
           </div>
-          <div class="col-md-4 maleBody" id="right-player-body">
-            <div class="col-md-12 trump" id="right-player-head"></div>
+          <div class="col-md-4 standardizedBGImages maleBody" id="right-player-body">
+            <div class="col-md-12 standardizedBGImages trump" id="right-player-head"></div>
           </div>
         </div>
       </div>
@@ -159,9 +159,8 @@
         </div>
       </div>
       <div class="footer centerThis">
-        <button type="" class="btnNewGame">REMATCH</button>
+        <button type="" class="btnNewGame" onClick="window.location.reload()">REMATCH</button>
       </div>
-
     </section>
   </article>
 
