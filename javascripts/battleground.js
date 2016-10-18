@@ -30,15 +30,16 @@ let player, enemy
 		$("#enemy-stats").html(
 			`<h1>${enemy.class}</h1>
 			<h3>With ${enemy.weapon}</h3>
-			<h1 id="enemyHp">${enemy.health}</h1>`
+			<h1 id="enemyHp">Votes: ${enemy.health}</h1>`
 		);
 	};
 
 	battle.updatePlayerHealth = function() {
 		$("#player-stats").html(
-			`<h1>${player.voterName}</h1>
-			<h3>${player.class} with ${player.weapon}</h3>
-			<h1>${player.health}</h1>`
+			`<h1>${player.class}</h1>
+			<h3>with ${player.weapon}</h3>
+			<h1>Votes: ${player.health}</h1>
+			<h4>User Name: ${player.voterName}</h4>`
 		);
 	}
 
@@ -51,15 +52,16 @@ let player, enemy
 
 		//output player info to dom info div.
 		$("#player-stats").html(
-			`<h1>${player.voterName}</h1>
-			<h3>${player.class} with ${player.weapon}</h3>
-			<h1>${player.health}</h1>`
+			`<h1>${player.class}</h1>
+			<h3>with ${player.weapon}</h3>
+			<h1>Votes: ${player.health}</h1>
+			<h4>User Name: ${player.voterName}</h4>`
 		);
 		// output enemy info to the dom.
 		$("#enemy-stats").html(
 			`<h1>${enemy.class}</h1>
 			<h3>With ${enemy.weapon}</h3>
-			<h1>${enemy.health}</h1>`
+			<h1>Votes: ${enemy.health}</h1>`
 		);
 
 	}
