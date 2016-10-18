@@ -1,51 +1,74 @@
 /*
-  Test code to generate a human player and an orc player
+  Test code to generate a human player and an enemy player
  */
-// var warrior = new Gauntlet.Combatants.Human();
-// warrior.setWeapon(new WarAxe());
-// warrior.generateClass();  // This will be used for "Surprise me" option
-// console.log(warrior.toString());
+  // let playerOne = new Gauntlet.Combatants.Human();
+  // playerOne.weapon = "bare hands";
+  // playerOne.class = "Hillary Clinton";
+  // playerOne.voterName = "Taylor";
+  // console.log(playerOne.toString());
 
-// var orc = new Gauntlet.Combatants.Orc();
-// orc.generateClass();
-// orc.setWeapon(new BroadSword());
-// console.log(orc.toString());
+  // let enemyOne = new Gauntlet.Combatants.Opponent();
+  // enemyOne.weapon = "talking points";
+  // enemyOne.class();
+  // console.log(enemyOne.toString());
 
 /*
   Test code to generate a spell
  */
 // var spell = new Gauntlet.SpellBook.Sphere();
 // console.log("spell: ", spell.toString());
-var playerName = $("#player-name").value; // grabs player name once typed
+
 /* Create new instance of Human */
-/* Declare this.voterName = playerName; */
-
-
-// For Selecting Candidate:
-/* use if statement to determine if the user clicked Clinton or Trump
-   if Trump is clicked, class = "Donald Trump"
-   if Clinton is clicked, class = "Hillary Clinton" 
-BOTH CLINTON & TRUMP BUTTONS will need id's so we can call them in the .js files */
-
-
-
-//For Selecting Weapon:
-/* if statement for when a weapon is clicked, to "equip" player with weapon
-When "Debate your opponent" is clicked, an enemy also needs to be created with:
- > class (candidate)
- > weapon
- > health (should be already covered in player.js, but double check logic... initially prints 70)
-*/
+let playerOne = new Gauntlet.Combatants.Human();
+/* Create new instance of Opponent */
 $(document).ready(function() {
   /*
     Show the initial view that accepts player name
    */
   $("#player-setup").show();
-  var playerOne = new Gauntlet.Combatants.Player();
-  playerOne.weapon = "bare hands";
-  playerOne.class = "Hillary Clinton";
-  playerOne.voterName = "Taylor";
-  console.log(playerOne.toString());
+
+  //event listener to set player name
+  $("#candidateBtn").click(function() {
+    var playerName = $("#player-name").val(); // grabs player name once typed
+    /* Declare this.voterName = playerName; */
+    playerOne.voterName = playerName;
+    console.log(playerOne.toString());
+  });
+
+  // For Selecting Candidate:
+  /* use if statement to determine if the user clicked Clinton or Trump
+  if Trump is clicked, class = "Donald Trump"
+  if Clinton is clicked, class = "Hillary Clinton" 
+  BOTH CLINTON & TRUMP BUTTONS will need id's so we can call them in the .js files */
+  //event listener to set player class
+  $(".btn--blue").click(function() {
+    playerOne.class = "Hillary Clinton";
+    console.log(playerOne.toString());
+  });
+  $(".btn--orange").click(function() {
+    playerOne.class = "Donald Trump";
+    console.log(playerOne.toString());
+  });
+
+  //For Selecting Weapon:
+  /* if statement for when a weapon is clicked, to "equip" player with weapon
+  When "Debate your opponent" is clicked, an enemy also needs to be created with:
+  > class (candidate)
+  > weapon
+  > health (should be already covered in player.js, but double check logic... initially prints 70)
+  */
+  $("#talkingpoints").click(function() {
+    playerOne.weapon = "talking points";
+    console.log(playerOne.toString());
+  });
+  $("#experience").click(function() {
+    playerOne.weapon = "experience";
+    console.log(playerOne.toString());
+  });
+  $("#barehands").click(function() {
+    playerOne.weapon = "bare hands";
+    console.log(playerOne.toString());
+  });
 
 
   /*
