@@ -26,7 +26,7 @@ function getClintonWordsAJAX(){
       });
     });
   }
-{}
+
 gauntletWords.getTrumpWords = function() {
   getTrumpWordsAJAX().then(function(statementsPass) {
     trumpAttackWords = statementsPass.trumpAttackStatements;
