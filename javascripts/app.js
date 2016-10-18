@@ -93,7 +93,6 @@ $(document).ready(function() {
         moveAlong = true;
         buttholio.class();
         Gauntlet.InitializeBattleground(playerOne, buttholio);
-
         break;
     }
 
