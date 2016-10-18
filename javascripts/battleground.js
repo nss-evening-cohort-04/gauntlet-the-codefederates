@@ -2,6 +2,30 @@ var Gauntlet = (function(battle){
 
 let player, enemy
 
+	battle.setAvatarPosition = function(player) {
+		console.log(player);
+		console.log(player.class);
+		if(player.class === 'Donald Trump') {
+			$('#left-player-body').removeClass('femaleBody');
+			$('#left-player-body').addClass('maleBody');
+			$('#right-player-body').removeClass('maleBody');
+			$('#right-player-body').addClass('femaleBody');
+			$('#left-player-head').removeClass('hillary');
+			$('#left-player-head').addClass('trump');
+			$('#right-player-head').removeClass('trump');
+			$('#right-player-head').addClass('hillary');
+		}else {
+			$('#left-player-body').removeClass('maleBody');
+			$('#left-player-body').addClass('femaleBody');
+			$('#right-player-body').removeClass('femaleBody');
+			$('#right-player-body').addClass('maleBody');
+			$('#left-player-head').removeClass('trump');
+			$('#left-player-head').addClass('hillary');
+			$('#right-player-head').removeClass('hillary');
+			$('#right-player-head').addClass('trump');
+		}
+	};
+
 	battle.updateEnemyHealth = function() {
 		$("#enemy-stats").html(
 			`<h1>${enemy.class}</h1>
@@ -22,6 +46,8 @@ let player, enemy
 
 		player = currentPlayer;
 		enemy = currentEnemy;
+
+		battle.setAvatarPosition(player);
 
 		//output player info to dom info div.
 		$("#player-stats").html(
