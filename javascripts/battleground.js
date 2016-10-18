@@ -70,29 +70,65 @@ let player, enemy
 		$("#attackButton").on("click", function(){
 			let playerAttackMath = Math.floor(Math.random() * (player.attack + 1));
 			let enemyAttackMath = Math.floor(Math.random()* (enemy.attack + 1));
-			let playerAttack = player.health -= enemyAttackMath;
-			let enemyAttack = enemy.health -= playerAttackMath;
-			console.log("player hp", player.health);
-			console.log("enemy hp", enemy.health);
-			console.log("player attack", playerAttackMath);
-			console.log("enemy attack", enemyAttackMath);
+			let enemyAttack, playerAttack;
+			// console.log("player hp", player.health);
+			// console.log("player attack", playerAttackMath);
+			// console.log("enemy hp", enemy.health);
+			// console.log("enemy attack", enemyAttackMath);
+			switch(player.class) {
+				case "Donald Trump":
+					Gauntlet.getTrumpWords();
+					enemyAttack = enemy.health -= playerAttackMath;
+					console.log("player attack", playerAttackMath);
+					console.log("enemy hp", enemy.health);
+					//call to update health after attack
+					battle.updateEnemyHealth();
+					//Enemy attack after 3 seconds
+					setTimeout(function(){
+						Gauntlet.getClintonWords();
+						playerAttack = player.health -= enemyAttackMath;
+						console.log("enemy attack", enemyAttackMath);
+						console.log("player hp", player.health);
+						battle.updatePlayerHealth();
+					}, 3000);		
+					break;
+				case "Hillary Clinton":
+					Gauntlet.getClintonWords();
+					enemyAttack = enemy.health -= playerAttackMath;
+					console.log("player attack", playerAttackMath);
+					console.log("enemy hp", enemy.health);
+					//call to update health after attack
+					battle.updateEnemyHealth();
+					setTimeout(function(){
+						Gauntlet.getTrumpWords();
+						playerAttack = player.health -= enemyAttackMath;
+						console.log("enemy attack", enemyAttackMath);
+						console.log("player hp", player.health);
+						battle.updatePlayerHealth();
+					}, 3000);
+					break;
+			}
+			
+			
+			
 			//combat log text output
-			$("#battleLog").text("");
-			let currentLog = $(`<p><span class="insertText">${enemy.voterName}</span> attacks <span class="insertText">${player.voterName}</span> with <span class="insertText">${enemy.weapon}</span> This attack does <span class="insertText">${enemyAttackMath}</span> damage.<h1>player health is : ${player.health}</h1></p> <p><span class="insertText">${player.voterName}</span> attacks <span class="insertText">${enemy.voterName}</span> with <span class="insertText">${player.weapon}</span>. This attack does <span class="insertText">${playerAttackMath}</span> damage<h1 id="enemyHp">enemy health is : ${enemyAttack}</h1>.</p>`);
+			// $("#battleLog").text("");
+			// let currentLog = $(`<p><span class="insertText">${enemy.voterName}</span> attacks <span class="insertText">${player.voterName}</span> with <span class="insertText">${enemy.weapon}</span> This attack does <span class="insertText">${enemyAttackMath}</span> damage.<h1>player health is : ${player.health}</h1></p> <p><span class="insertText">${player.voterName}</span> attacks <span class="insertText">${enemy.voterName}</span> with <span class="insertText">${player.weapon}</span>. This attack does <span class="insertText">${playerAttackMath}</span> damage<h1 id="enemyHp">enemy health is : ${enemyAttack}</h1>.</p>`);
 
 			//push all to DOM
-			currentLog.hide().appendTo("#battleLog").fadeIn();
+			// currentLog.hide().appendTo("#battleLog").fadeIn();
 
-			//call to update health after attack
-			battle.updateEnemyHealth();
-			battle.updatePlayerHealth();
+			
+			
 
 			//check if any healths are zero and do somethin about it!
 			if (player.health <= 0) {
+				player.health = 0;
 				$("#attackButton").attr("disabled", true);
 				alert('you lose')
 			};
 			if (enemy.health <= 0) {
+				enemy.health = 0;
 				$("#attackButton").attr("disabled", true);
 				alert('you win')
 			} else {

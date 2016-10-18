@@ -32,7 +32,7 @@ gauntletWords.getTrumpWords = function() {
     trumpAttackWords = statementsPass.trumpAttackStatements;
     console.log("trumpAttackWords", trumpAttackWords);
     var trumpStatement = mudSlinger(trumpAttackWords);
-    return trumpStatement;
+    $('#attackWords')[0].innerText ="Donald: "+trumpStatement.statement;
   })
 }
 
@@ -41,7 +41,7 @@ gauntletWords.getClintonWords = function() {
     clintonAttackWords = statementsPass.clintonAttackStatements;
     console.log("clintonAttackWords", clintonAttackWords);
     var clintonStatement = mudSlinger(clintonAttackWords);
-    return clintonStatement;
+    $('#attackWords')[0].innerText ="Hillary: "+clintonStatement.statement;
   })
 }
 
